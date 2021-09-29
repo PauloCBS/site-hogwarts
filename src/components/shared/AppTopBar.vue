@@ -1,14 +1,15 @@
 <template>
   <div class="App-top-bar">
-     <v-app>
-    <v-app-bar
+      <v-app-bar
       color="blue-grey lighten-1"
       dark
       app
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Hogwarts</v-toolbar-title>
+      <v-toolbar-title class="font-weight-black">
+          <div>Hogwarts</div>
+          </v-toolbar-title>
 
     <v-spacer></v-spacer>
 
@@ -96,22 +97,19 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-<router-view/>
-    <v-main>
-      
-        <inicio/>
-      
-    </v-main>
-  </v-app>
-  </div>
+</div>
+    
+  
+  
 </template>
-​
+
 <script>
 export default {
-  name: 'NovoComponente'
+   name: 'AppTopBar',
+
+  data: () => ({
+    drawer: false,
+    group: null,
+}),
 }
 </script>
-​
-<style scoped>
-​
-</style>
