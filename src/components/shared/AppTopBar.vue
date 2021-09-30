@@ -1,5 +1,5 @@
 <template>
-  <div class="App-top-bar">
+  <div class="app-top-bar">
       <v-app-bar
       color="blue-grey lighten-1"
       dark
@@ -8,7 +8,7 @@
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title class="font-weight-black">
-          <div>Hogwarts</div>
+          Hogwarts
           </v-toolbar-title>
 
     <v-spacer></v-spacer>
@@ -60,19 +60,24 @@
           v-model="group"
           active-class="blue-grey lighten-1"
         >
+
+        <router-link to="/">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-castle</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Sobre Hogwarts</v-list-item-title>
           </v-list-item>
+        </router-link>
 
+        <router-link to="/Sonserina">  
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-snake</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Sonserina</v-list-item-title>
           </v-list-item>
+          </router-link>
 
           <v-list-item>
             <v-list-item-icon>
@@ -99,8 +104,6 @@
     </v-navigation-drawer>
 </div>
     
-  
-  
 </template>
 
 <script>
@@ -113,3 +116,8 @@ export default {
 }),
 }
 </script>
+<style scoped>
+  .app-top-bar a { 
+     text-decoration: none;
+     }
+</style>
